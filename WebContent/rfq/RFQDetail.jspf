@@ -1,0 +1,28 @@
+<div class="container-fluid" data-ng-controller="rfqDetail" >
+
+<h2>Request For Quote: {{ rfq.id }}</h2>
+<button type="button" class="btn btn-primary">Create PDF</button>
+<br><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>RFQ Number</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="lineItem in rfq.lineItems"  data-ng-class="{'danger' : rfq.status}">
+        
+        <td>{{lineItem.partNumber}}</td>
+        <td>{{lineItem.description}}</td>
+        <td>{{lineItem.price}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+  
+</div>
+
+<script src="rfq/rfqDetail.js"></script>

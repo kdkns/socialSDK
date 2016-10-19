@@ -1,0 +1,20 @@
+<div class="container" data-ng-controller="workOrderList" >
+  <h2>Work Orders</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID Number</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr data-ng-repeat="workOrder in workOrdersArray"  data-ng-class="{'danger' : workOrder.status}">
+        <td><a href="#workOrderDetail/{{workOrder.id}}">{{workOrder.id}}</a></td>
+        <td>{{workOrder.status}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+<script src="workorder/workOrderList.js"></script>

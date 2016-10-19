@@ -1,0 +1,1 @@
+ var angularApp = angular.module('AAC', ['ui.bootstrap', 'ngRoute']);
